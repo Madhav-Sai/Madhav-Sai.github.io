@@ -1,18 +1,29 @@
-function open_Menu() {
-    var a = document.querySelector(".hamburger-menu");
-    var b = document.querySelector(".top");
-    var c = document.querySelector(".bottom");
-    var d = document.querySelector(".middle");
-    var e = document.getElementById("m-menu");
-    if (e.style.height === "0%") {
-        b.style.transform = "rotate(45deg)";
-        c.style.transform = "rotate(-45deg)";
-        d.style.display = "none";
-        e.style.height = "200px";
-    } else {
-        b.style.transform = "rotate(0deg)";
-        c.style.transform = "rotate(0deg)";
-        d.style.display = "block";
-        e.style.height = "0%";
+	// Sticky Navbar
+    let header = document.querySelector('header');
+    let menu = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
+     
+     
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('shadow', window.scrollY > 0);
+    });
+     
+    menu.onclick = () => {
+        navbar.classList.toggle('active');
     }
-}
+    window.onscroll = () => {
+        navbar.classList.remove('active');
+    }
+     
+    // Dark Mode
+    let darkmode = document.querySelector('#darkmode');
+     
+    darkmode.onclick = () => {
+        if(darkmode.classList.contains('bx-moon')){
+            darkmode.classList.replace('bx-moon','bx-sun');
+            document.body.classList.add('active');
+        }else{
+            darkmode.classList.replace('bx-sun','bx-moon');
+            document.body.classList.remove('active');
+        }
+    }
