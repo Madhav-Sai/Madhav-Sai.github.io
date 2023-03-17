@@ -463,7 +463,8 @@ form textarea {
   width: 100%;
   background-color: rgb(32, 113, 3);
   color: white;
-  height: 50px;
+  min-height: 50px;
+  max-height: fit-content;
   text-align: center;
   border-radius: 10px;
   padding-top: 12px;
