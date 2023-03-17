@@ -354,7 +354,7 @@ span {
 }
 .portfolio-img .i1{
   margin-left: 0px;
-  /* animation: Slider 10s linear 2s infinite; */
+  animation: Slider 10s linear 2s infinite;
 }
 .sliderControls{
   width: 70%;
