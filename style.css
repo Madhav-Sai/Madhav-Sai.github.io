@@ -459,6 +459,17 @@ form textarea {
 .contact-button:hover {
   background: var(--hover);
 }
+.alert{
+  width: 100%;
+  background-color: rgb(32, 113, 3);
+  color: white;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 12px;
+  margin-bottom: 10px;
+  display: none;
+}
 
 .footer {
   display: grid;
