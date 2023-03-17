@@ -350,7 +350,6 @@ span {
   width: 100%;
   height: fit-content;
   display: block;
-  transition-duration:1s;
 }
 .portfolio-img .i1{
   margin-left: 0px;
