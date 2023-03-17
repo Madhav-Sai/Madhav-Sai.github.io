@@ -27,3 +27,8 @@
             document.body.classList.remove('active');
         }
     }
+    
+  // Slider
+    function slideBack(){
+       alert("Sorry! Feature is not available in this version of youe Browser. Please try again after Updating your Browser.")
+    }
