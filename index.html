@@ -215,12 +215,17 @@
             <span>Connect With Me</span>
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="text" placeholder="Your Name">
-                <input type="email" name="" id="" placeholder="Your Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
-                <input type="button" value="Send" class="contact-button">
+            
+             <form action="" id="contactForm">
+                <div class="alert">
+                    Your Message Has Been Sent Successfully
+                </div>
+                <input type="text" placeholder="Your Name" name="userName" id="userName">
+                <input type="email" placeholder="Your Email" name="emailId" id="emailId">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
+                <input type="submit" value="Send" class="contact-button" id="sendBtn">
             </form>
+            
         </div>
     </section>
 
@@ -245,6 +250,7 @@
 
 
     <!-- Link To JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
