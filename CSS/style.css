@@ -358,7 +358,7 @@ span {
 }
 .sliderControls{
   width: 70%;
-  display: flex;
+  display: none;
 }
 .sliderControls .b1{
   width: 100%;
