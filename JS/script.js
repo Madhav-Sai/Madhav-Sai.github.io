@@ -80,7 +80,18 @@ const getElementVal = (id) => {
         }
     }
     
-  // Slider
-    function slideBack(){
-       alert("Sorry! Feature is not available in this version of youe Browser. Please try again after Updating your Browser.")
-    }
+// Slider
+
+function autoSlider() {
+    var counter = 1;
+    setInterval(function () {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 5) {
+            counter = 1;
+        }
+
+    }, 5000);
+}
+
+autoSlider();
