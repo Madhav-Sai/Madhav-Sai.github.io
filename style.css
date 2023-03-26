@@ -582,12 +582,12 @@ form textarea {
   /* font-family: 'Alfa Slab One', cursive; */
   /* font-family: "Poppins", sans-serif; */
   font-size:var(--big-font);
+  font-weight: 600;
   position: relative;
   display: inline-block;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
-  
 }
 @keyframes waviy {
   0%,40%,100% {
