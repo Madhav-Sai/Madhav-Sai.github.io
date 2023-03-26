@@ -409,7 +409,7 @@ span {
 }
 
 .manual-Btn{
-  border: 2px solid hsla(260, 100%, 44%, 0.4);
+  background-color: hsla(260, 100%, 44%, 0.4);
   border-radius: 15px;
   cursor: pointer;
   padding: 10px;
@@ -452,7 +452,7 @@ span {
 }
 
 .navigation-Auto div{
-  border: 2px solid hsla(260, 100%, 44%, 0.4);
+  background-color: hsla(260, 100%, 44%, 0.4);
   padding: 10px;
   border-radius: 15px;
   transition: 1s;
