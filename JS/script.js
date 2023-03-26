@@ -1,3 +1,4 @@
+// Database Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDJn-2PL8hl5mU6WuAhG4s8F2YFdznYYQ4",
     authDomain: "contact-form-858c1.firebaseapp.com",
@@ -15,14 +16,14 @@ firebase.initializeApp(firebaseConfig);
 var contactFormDB = firebase.database().ref('contactForm');
 document.getElementById('contactForm').addEventListener("submit", submitForm);
 
-function submitForm(e){
+function submitForm(e) {
     e.preventDefault();
 
     var userName = getElementVal('userName');
     var emailId = getElementVal('emailId');
     var message = getElementVal('message');
 
-    saveMessages(userName,emailId,message);
+    saveMessages(userName, emailId, message);
 
     // Display Alert Message
     document.querySelector('.alert').style.display = 'block';
@@ -36,7 +37,7 @@ function submitForm(e){
     document.getElementById('contactForm').reset();
 }
 
-const saveMessages = (userName,emailId,message) => {
+const saveMessages = (userName, emailId, message) => {
     var newContactForm = contactFormDB.push();
     newContactForm.set({
         userName: userName,
@@ -50,48 +51,88 @@ const getElementVal = (id) => {
     return document.getElementById(id).value;
 }
 
+
 // Sticky Navbar
-    let header = document.querySelector('header');
-    let menu = document.querySelector('#menu-icon');
-    let navbar = document.querySelector('.navbar');
-     
-     
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('shadow', window.scrollY > 0);
-    });
-     
-    menu.onclick = () => {
-        navbar.classList.toggle('active');
+let header = document.querySelector('header');
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow', window.scrollY > 0);
+});
+
+menu.onclick = () => {
+    navbar.classList.toggle('active');
+}
+window.onscroll = () => {
+    navbar.classList.remove('active');
+}
+
+// Dark Mode
+let darkmode = document.querySelector('#darkmode');
+
+darkmode.onclick = () => {
+    if (darkmode.classList.contains('bx-moon')) {
+        darkmode.classList.replace('bx-moon', 'bx-sun');
+        document.body.classList.add('active');
+    } else {
+        darkmode.classList.replace('bx-sun', 'bx-moon');
+        document.body.classList.remove('active');
     }
-    window.onscroll = () => {
-        navbar.classList.remove('active');
-    }
-     
-    // Dark Mode
-    let darkmode = document.querySelector('#darkmode');
-     
-    darkmode.onclick = () => {
-        if(darkmode.classList.contains('bx-moon')){
-            darkmode.classList.replace('bx-moon','bx-sun');
-            document.body.classList.add('active');
-        }else{
-            darkmode.classList.replace('bx-sun','bx-moon');
-            document.body.classList.remove('active');
-        }
-    }
-    
+}
+
 // Slider
 
+var counter = 1;
 function autoSlider() {
-    var counter = 1;
     setInterval(function () {
         document.getElementById('radio' + counter).checked = true;
         counter++;
         if (counter > 5) {
-            counter = 1;
+            counter = 4;
+
+            setTimeout(function () {
+                counter = 3;
+            }, 3000);
+
+            setTimeout(function () {
+                counter = 2;
+            }, 6000);
+
+            setTimeout(function () {
+                counter = 1;
+            }, 9000);
+
         }
 
-    }, 5000);
+    }, 3000);
 }
 
-autoSlider();
+function stopAutoSlider(value) {
+    counter = 22;
+    if (value == 1) {
+        setTimeout(function () {
+            counter = 2;
+        }, 7000);
+    } else if (value == 2) {
+        setTimeout(function () {
+            counter = 3;
+        }, 7000);
+    }
+    else if (value == 3) {
+        setTimeout(function () {
+            counter = 4;
+        }, 7000);
+    }
+    else if (value == 4) {
+        setTimeout(function () {
+            counter = 5;
+        }, 7000);
+    }
+    else if (value == 5) {
+        setTimeout(function () {
+            counter = 1;
+        }, 7000);
+    }
+}
