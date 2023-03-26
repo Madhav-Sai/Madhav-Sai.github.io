@@ -136,3 +136,16 @@ function stopAutoSlider(value) {
         }, 7000);
     }
 }
+
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.documentElement.scrollTop > 550) {
+    document.querySelector('.html-bar').style.animation = "htmlbar 3s ease";
+    document.querySelector('.css-bar').style.animation = "cssbar 3s ease";
+    document.querySelector('.js-bar').style.animation = "jsbar 3s ease";
+    document.querySelector('.react-bar').style.animation = "reactbar 3s ease";
+  }
+
+}
