@@ -261,22 +261,22 @@ span {
 
 .html-bar {
   width: 94%;
-  animation:htmlbar 3s ease  infinite alternate;
+  
 }
 
 .css-bar {
   width: 84%;
-  animation:cssbar 3s ease  infinite alternate;
+  
 }
 
 .js-bar {
   width: 74%;
-  animation:jsbar 3s ease  infinite alternate;
+  
 }
 
 .react-bar {
   width: 80%;
-  animation:reactbar 3s ease  infinite alternate;
+  
 }
 
 @keyframes htmlbar {
