@@ -138,7 +138,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     var InboxSection = document.getElementById("Inbox_Section");
     var LoginSection = document.getElementById("LoginSection");
     
-    document.title = "My Inbox";
+    document.title = "Madhav Sai | My Inbox";
     LoginSection.style.display = "none";
     InboxSection.style.display = "block";
     RetriveData();
@@ -146,7 +146,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
   }
   else {
-    document.title = "Login";
+    document.title = "Madhav Sai | Login";
     // LoginSection.style.display = "block";
     // InboxSection.style.display = "none";
   }
