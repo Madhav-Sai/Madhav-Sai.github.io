@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/inbox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Madhav Sai | Inbox</title>
+</head>
+
+<body class="active" onload="preloaderClose()">
+    <!-- Navbar -->
+    <header id="InboxHeader">
+        <a href="#" class="logo">My Inbox</a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar" id="logOutBtnUL">
+            <li id="logOutBtn" onclick="logOut()"><a href="#contact">Log Out</a></li>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+
+    <div class="lds-dual-ring_Container">
+        <div class="lds-dual-ring">
+
+        </div>
+        <h4>Please Wait...</h4>
+    </div>
+
+    <section class="LoginSection" id="LoginSection">
+
+        <div class="heading">
+            <h2>Login</h2>
+            <span>To View Your Messages</span>
+        </div>
+
+        <div class="contact-form" id="contact-form">
+            <form action="">
+                <input type="email" placeholder="Email" name="email" id="emailInput" required>
+                <input type="password" placeholder="Password" name="Password" id="PasswordInput" required>
+                <input type="button" value="Login" class="Login-button" id="LoginBtn" onclick="login()">
+            </form>
+        </div>
+
+    </section>
+
+    <section class="Inbox_Section" id="Inbox_Section">
+
+
+    </section>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="/js/inbox.js"></script>
+
+</body>
+
+</html>
