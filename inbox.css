@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8ff;
+}
+
+:root {
+    --main-color: #033a80;
+    --bg-color: #fff;
+    --text-color: #0f0c27;
+    --hover: hsl(260, 100%, 51%);
+
+    --big-font: 3.2rem;
+    --medium-font: 1.8rem;
+    --p-font: 0.941rem;
+}
+
+body.activeInbox {
+    --text-color: #fff;
+    --bg-color: #0f0c27;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+.logo {
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    background-color: var(--bg-color);
+}
+
+
+.LoginSection {
+    padding-top: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.LoginSection div {
+    width: 100%;
+    background-color: transparent;
+}
+
+.LoginSection div h2,
+.LoginSection div span,
+#contact-form form {
+    background-color: transparent;
+}
+
+.LoginSection input {
+    width: 70%;
+}
+
+.LoginSection input:nth-child(3) {
+    width: 25%;
+    cursor: pointer;
+    background: #2768d9;
+    color: #fff;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 23%;
+}
+
+.LoginSection .Login-button:hover {
+    background: var(--hover);
+}
+
+.Inbox_Section {
+    margin-top: 3%;
+    background: transparent;
+    display: none;
+}
+
+.Inbox_Section .MessageList {
+    margin-top: 10px;
+    border: solid 1.5px grey;
+    border-radius: 15px;
+    padding: 1% 2%;
+    width: 98%;
+    margin-top: 1%;
+    height: 23%;
+    background-color: transparent;
+}
+
+.Inbox_Section .MessageList .MessageListContent {
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.Inbox_Section .MessageList .MessageListContent h2,
+.Inbox_Section .MessageList .MessageListContent p span,
+#darkmode,
+#logOutBtn,
+#logOutBtn a,
+#menu-icon {
+    background-color: transparent;
+}
+
+#darkmode {
+    display: none;
+}
+
+.Inbox_Section .MessageList .MessageListContent h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.Inbox_Section .MessageList .MessageListContent .MessageDetails {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: rgb(2, 166, 70);
+    margin-top: -8px;
+
+}
+
+.Inbox_Section .MessageList .MessageListContent .MessageDetails span {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.Inbox_Section .MessageList .MessageListContent .MessageText {
+    font-size: 1rem;
+    margin-top: 0.5%;
+    background-color: transparent;
+    font-weight: 400;
+    text-indent: 30px;
+    opacity: 0.85;
+}
+
+.Inbox_Section .MessageList .readMore {
+    cursor: pointer;
+    color: var(--main-color);
+    font-weight: bold;
+    background-color: transparent;
+
+}
+
+.lds-dual-ring_Container {
+    background-color: transparent;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    padding-right: 4%;
+    text-align: center;
+    left: 40%;
+    top: 30%;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    background-color: transparent;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #0f0c27;
+    border-color: white transparent white transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    background-color: transparent;
+
+}
+
+.lds-dual-ring_Container h4 {
+    width: 100%;
+    background-color: transparent;
+    margin-top: 50px;
+    font-size: 25px;
+    padding-left: 25px;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 1025px) {
+    .LoginSection {
+        width: 100%;
+    }
+
+    .LoginSection input {
+        width: 100%;
+    }
+
+    .LoginSection input:nth-child(3) {
+        width: 30%;
+        margin-left: 35%;
+    }
+
+    .Inbox_Section .MessageList {
+        width: 100%;
+    }
+
+    .lds-dual-ring_Container {
+        left: 36%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .LoginSection {
+        width: 70%;
+    }
+
+    .LoginSection input {
+        width: 100%;
+    }
+
+    .LoginSection input:nth-child(3) {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .lds-dual-ring_Container {
+        left: 32%;
+    }
+}
+
+@media (max-width: 445px) {
+    .LoginSection {
+        width: 100%;
+    }
+
+    .LoginSection input {
+        width: 100%;
+    }
+
+    .LoginSection input:nth-child(3) {
+        width: 50%;
+        margin-left: 23%;
+    }
+
+    .Inbox_Section .MessageList {
+        margin-top: 3%;
+    }
+
+    .Inbox_Section .MessageList .MessageListContent h2 {
+        font-size: 1.2rem;
+
+    }
+
+    .Inbox_Section .MessageList .MessageListContent .MessageDetails {
+        margin-top: -5px;
+        flex-direction: column;
+    }
+
+    .Inbox_Section .MessageList .MessageListContent .MessageDetails span {
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+
+    .Inbox_Section .MessageList .MessageListContent .MessageText {
+        font-size: 0.9rem;
+        opacity: 0.85;
+    }
+    .lds-dual-ring_Container {
+        left: 20%;
+    }
+
+}
+@media (max-width: 376px) {
+    .lds-dual-ring_Container {
+        left: 16%;
+    }
+}
+@media (max-width: 340px) {
+    .LoginSection {
+        width: 100%;
+    }
+
+    .LoginSection input {
+        width: 100%;
+    }
+
+    .LoginSection input:nth-child(3) {
+        width: 50%;
+        margin-left: 23%;
+    }
+    .lds-dual-ring_Container {
+        left: 11%;
+    }
+}
