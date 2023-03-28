@@ -138,7 +138,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     var InboxSection = document.getElementById("Inbox_Section");
     var LoginSection = document.getElementById("LoginSection");
     
-    document.title = "Madhav Sai | My Inbox";
+    document.title = "Madhav Sai | Inbox";
     LoginSection.style.display = "none";
     InboxSection.style.display = "block";
     RetriveData();
