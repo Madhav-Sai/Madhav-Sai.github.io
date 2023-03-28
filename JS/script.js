@@ -1,3 +1,31 @@
+const Fulldate = new Date();
+var date = Fulldate.getDate();
+var month = Fulldate.getMonth()+1;
+var year = Fulldate.getFullYear();
+var hours = Fulldate.getHours();
+var minutes = Fulldate.getMinutes();
+if(minutes<10){
+    minutes = "0"+minutes;
+}
+else{
+    minutes = minutes;
+}
+if(month<10){
+    month = "0"+month;
+}
+else{
+    month = month;
+}
+if(hours<10){
+    hours = "0"+hours;
+}
+else{
+    hours = hours;
+}
+
+var FinalDate = date + "/" + month + "/" + year + " " + hours + ":" + minutes;
+
+
 // Database Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDJn-2PL8hl5mU6WuAhG4s8F2YFdznYYQ4",
@@ -22,8 +50,9 @@ function submitForm(e) {
     var userName = getElementVal('userName');
     var emailId = getElementVal('emailId');
     var message = getElementVal('message');
+    
 
-    saveMessages(userName, emailId, message);
+    saveMessages(userName, emailId, message, FinalDate);
 
     // Display Alert Message
     document.querySelector('.alert').style.display = 'block';
@@ -37,12 +66,13 @@ function submitForm(e) {
     document.getElementById('contactForm').reset();
 }
 
-const saveMessages = (userName, emailId, message) => {
+const saveMessages = (userName, emailId, message, finalDate) => {
     var newContactForm = contactFormDB.push();
     newContactForm.set({
         userName: userName,
         emailId: emailId,
         message: message,
+        date : finalDate
     });
 
 };
@@ -136,7 +166,6 @@ function stopAutoSlider(value) {
         }, 7000);
     }
 }
-
 
 window.onscroll = function() {myFunction()};
 
