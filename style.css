@@ -79,6 +79,7 @@ header.shadow {
   font-size: 1.61rem;
   font-weight: 600;
   color: var(--text-color);
+  /* background-color: var(--bg-color); */
 }
 
 .navbar {
@@ -257,27 +258,50 @@ span {
   height: 0.5rem;
   background: var(--main-color);
   border-radius: 0.5rem;
+  
 }
+
+/* .percent-bar::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,transparent,red,transparent);
+  animation: shiny 3s ;
+  overflow: hidden;
+  opacity: 0;
+} */
 
 .html-bar {
   width: 94%;
-  
+  /* animation:htmlbar 3s ease; */
 }
 
 .css-bar {
   width: 84%;
-  
+  /* animation:cssbar 3s ease; */
 }
 
 .js-bar {
   width: 74%;
-  
+  /* animation:jsbar 3s ease; */
 }
 
 .react-bar {
   width: 80%;
-  
+  /* animation:reactbar 3s ease; */
 }
+
+/* @keyframes shiny {
+  0%{
+    opacity: 0;
+    width: 0%;
+  }
+  100%{
+    width: 90%;
+  }
+} */
 
 @keyframes htmlbar {
   0%{
@@ -314,7 +338,6 @@ span {
     width: 80%;
   }
 }
-
 
 .services-content {
   display: grid;
@@ -452,6 +475,7 @@ span {
 }
 
 .navigation-Auto div{
+  /* border: 2px solid hsla(260, 100%, 44%, 0.4); */
   background-color: hsla(260, 100%, 44%, 0.4);
   padding: 10px;
   border-radius: 15px;
@@ -575,6 +599,7 @@ form textarea {
 .copyright a {
   color: #22cf91;
 }
+
 .waviy {
   position: relative;
 }
@@ -582,12 +607,13 @@ form textarea {
   /* font-family: 'Alfa Slab One', cursive; */
   /* font-family: "Poppins", sans-serif; */
   font-size:var(--big-font);
-  font-weight: 600;
   position: relative;
   display: inline-block;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
+  font-weight: 600;
+  
 }
 @keyframes waviy {
   0%,40%,100% {
